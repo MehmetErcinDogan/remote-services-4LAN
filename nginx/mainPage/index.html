@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>System Panel</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Control Panel</h1>
+        <div class="links">
+
+            <div class="service-row">
+                <a id="btn-pdf" target="_blank">PDF Tools</a>
+                <label class="switch" title="Servisi Başlat/Durdur">
+                    <input type="checkbox" id="switch-pdf" onchange="toggleService('pdf-processor', this)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="service-row">
+                <a id="btn-touch" target="_blank">Remote Touchpad</a>
+                <label class="switch" title="Servisi Başlat/Durdur">
+                    <input type="checkbox" id="switch-touchpad" onchange="toggleService('remote-touchpad', this)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="service-row">
+                <a id="btn-weylus" target="_blank">Weylus</a>
+                <label class="switch" title="Servisi Başlat/Durdur">
+                    <input type="checkbox" id="switch-weylus" onchange="toggleService('weylus', this)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

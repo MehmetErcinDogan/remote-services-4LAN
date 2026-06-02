@@ -1,0 +1,12 @@
+services:
+  flask-controller:
+    build: ./flask-api
+    image: nginx-flask-controller:latest
+    container_name: nginx-flask-controller
+    privileged: true
+    pid: "host"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./flask-api:/app
+    networks:
+      - nginx_net

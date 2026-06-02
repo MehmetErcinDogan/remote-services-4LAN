@@ -1,0 +1,11 @@
+services:
+  remote-touchpad:
+    image: remote_touchpad_non_auth
+    container_name: remote-touchpad
+    profiles: ["manual"]
+    privileged: true
+    devices:
+      - "/dev/uinput:/dev/uinput"
+    networks:
+      - nginx_net
+    command: ["remote-touchpad", "-bind", "0.0.0.0:8080", "-mouse-move-speed", "2.5"]

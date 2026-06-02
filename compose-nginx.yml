@@ -1,0 +1,25 @@
+services:
+  reverse-proxy:
+    image: nginx:alpine
+    container_name: proxy-gateway
+    depends_on:
+      - flask-controller
+    ports:
+      - "443:443"
+      - "9444:9444"
+      - "9445:9445"
+      - "9446:9446"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/mainPage:/usr/share/nginx/mainPage:ro
+      - nginx_access_logs:/var/log/nginx
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - nginx_net
+
+volumes:
+  nginx_access_logs:
+    name: nginx_access_logs

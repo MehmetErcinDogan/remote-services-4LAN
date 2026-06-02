@@ -1,0 +1,13 @@
+# SSL Certs
+nginx/ssl/*.key
+nginx/ssl/*.crt
+
+# Python Cache Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Other Secret Files
+flask-api/.env
+nginx/.htpasswd

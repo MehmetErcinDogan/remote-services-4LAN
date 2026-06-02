@@ -1,0 +1,12 @@
+name: remote-services
+
+include:
+  - compose-controller.yml
+  - compose-nginx.yml
+  - compose-pdf.yml
+  - compose-touchpad.yml
+
+networks:
+  nginx_net:
+    name: nginx_net
+    driver: bridge
