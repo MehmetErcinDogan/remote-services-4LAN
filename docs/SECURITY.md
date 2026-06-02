@@ -10,7 +10,9 @@ The current configuration includes a pre-defined user named ercin.
 ### Generating a New Credentials File
 To create a new credentials file or to add a different user, use the Apache htpasswd utility:
 
+```bash
 htpasswd -c nginx/.htpasswd your_username
+```
 
 The command prompt will ask you to define and confirm a password. Omit the -c flag if you are appending a new user to an existing file rather than overwriting it.
 
