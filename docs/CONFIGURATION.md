@@ -5,18 +5,6 @@ The application utilizes environment variables to manage its configuration secur
 ## Environment Variables
 The necessary environment variables must be defined inside the `flask-api/.env` file. These variables control how the Flask application connects to internal services and manages operational states.
 
-## .env.example Setup
-You need to create a file named `.env` inside the `flask-api/` directory. Below is a template structure you can use as your starting point:
-
-```env
-# flask-api/.env
-FLASK_APP=app.py
-FLASK_ENV=production
-SECRET_KEY=your_secure_secret_key_here
-```
-
-Note: Ensure that the actual `.env` file is included in your `.gitignore` and never committed to version control.
-
 ## Detailed Example Environment File
 Below is an extended example block showing potential environment variables for the core application and its modular extensions:
 
