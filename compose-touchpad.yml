@@ -1,6 +1,6 @@
 services:
   remote-touchpad:
-    image: remote_touchpad_non_auth
+    image: ghcr.io/mehmetercindogan/remote-services-4lan/remote-touchpad-non-auth:v1.0
     container_name: remote-touchpad
     profiles: ["manual"]
     privileged: true
