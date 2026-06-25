@@ -7,7 +7,7 @@ This plug-and-play approach allows you to deploy only the services you actively 
 * **Core API:** Managed by the main `docker-compose.yml` file.
 * **Nginx Router:** Deployed via `compose-nginx.yml`.
 * **PDF Processor:** Deployed via `compose-pdf.yml`.
-* **Touchpad Controller:** Deployed via `compose-touchpad.yml`.
+* **Touchpad Controller:** Deployed via `compose-touchpad.yml`.*(Utilizes a custom, non-auth modified image hosted on GHCR, derived from [Unrud/remote-touchpad](https://github.com/Unrud/remote-touchpad)).*
 * **General Controller:** Deployed via `compose-controller.yml`.
 
 ## Adding New Features

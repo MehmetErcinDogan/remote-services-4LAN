@@ -18,3 +18,24 @@ The system isolates the web server layer from the application logic. Nginx handl
 3. [Configuration](docs/CONFIGURATION.md)
 4. [Security](docs/SECURITY.md)
 5. [Usage & API Endpoints](docs/API_USAGE.md)
+
+## Custom Container Images & Attribution
+
+This project utilizes custom-built Docker images to adapt external open-source tools to our specific network and security architecture.
+
+### Remote Touchpad Service
+The `remote-touchpad` service deployed via `compose-touchpad.yml` uses a custom-modified image rather than a standard release.
+* **Original Source & Attribution:** The core application was originally developed by [Unrud](https://github.com/Unrud/remote-touchpad). We deeply thank the original developer for their fantastic contribution to the open-source community.
+* **Modifications:** To seamlessly integrate with our internal Nginx reverse-proxy gateway and bypass redundant authentication layers, the original `auth` requirements were removed. The application was manually recompiled to directly listen to `/dev/uinput` devices on the host network.
+* **Image Location:** This custom image is publicly hosted on GitHub Container Registry (GHCR). Docker Compose automatically pulls it from: 
+  `ghcr.io/mehmetercindogan/remote-services-4lan/remote-touchpad-non-auth`
+
+## License
+
+The configuration files, architectural bindings, and custom integration scripts within this repository are released under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+*(Note: Externally integrated services like `remote-touchpad`, `stirling-pdf`, and `nginx` retain their original respective open-source licenses.)*
+
+## Contact & Inquiries:
+* **LinkedIn:** [Mehmet Erçin DOĞAN](https://www.linkedin.com/in/MehmetErcinDogan)
+* **GitHub:** [@MehmetErcinDogan](https://github.com/MehmetErcinDogan)
