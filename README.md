@@ -30,12 +30,19 @@ The `remote-touchpad` service deployed via `compose-touchpad.yml` uses a custom-
 * **Image Location:** This custom image is publicly hosted on GitHub Container Registry (GHCR). Docker Compose automatically pulls it from: 
   `ghcr.io/mehmetercindogan/remote-services-4lan/remote-touchpad-non-auth`
 
-## License
+## License & Commercial Use (Dual Licensing)
 
-The configuration files, architectural bindings, and custom integration scripts within this repository are released under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+This project is open-source and released under the **GNU Affero General Public License v3.0 (AGPLv3)**. 
+
+### What does this mean?
+* **For Individuals & Open Source:** You are free to use, modify, and distribute this software for personal or strictly open-source projects, provided that you also release your complete modifications and surrounding network services under the same AGPLv3 license.
+* **For Businesses & Commercial Products:** Integrating this software (via API, SaaS, or direct code inclusion) into a closed-source commercial product **requires a commercial license**. The AGPLv3 strictly prohibits the use of this software in proprietary network services without opening your own source code to the public.
+
+### Request a Commercial License
+If your organization wishes to use this infrastructure in a closed-source environment, bypass the AGPLv3 restrictions, or requires dedicated support, please contact the author to negotiate a **Commercial License**.
+
+**Contact & Inquiries:**
+* **LinkedIn:** [Mehmet Erçin DOĞAN](https://www.linkedin.com/in/MehmetErcinDogan)
+* **GitHub:** [@MehmetErcinDogan](https://www.github.com/MehmetErcinDogan)
 
 *(Note: Externally integrated services like `remote-touchpad`, `stirling-pdf`, and `nginx` retain their original respective open-source licenses.)*
-
-## Contact & Inquiries:
-* **LinkedIn:** [Mehmet Erçin DOĞAN](https://www.linkedin.com/in/MehmetErcinDogan)
-* **GitHub:** [@MehmetErcinDogan](https://github.com/MehmetErcinDogan)
